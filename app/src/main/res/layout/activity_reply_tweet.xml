@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.restclienttemplate.ReplyTweet">
+
+    <EditText
+        android:id="@+id/tweetReply"
+        android:layout_height="48dp"
+        android:layout_width="377dp"
+        android:maxLength="140"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <Button
+        android:id="@+id/tweetButtonReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmit"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Button"
+        tools:layout_editor_absoluteY="459dp"
+        tools:layout_editor_absoluteX="290dp" />
+
+    <TextView
+        android:id="@+id/counterReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="140"
+        tools:layout_editor_absoluteY="64dp"
+        tools:layout_editor_absoluteX="344dp"
+        android:layout_below="@+id/tweetReply"
+        android:layout_alignEnd="@+id/tweetReply" />
+
+</RelativeLayout>

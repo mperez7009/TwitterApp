@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.restclienttemplate.DetailActivity">
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@android:color/black"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="23dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="TextView"
+        android:layout_alignTop="@+id/profileImage"
+        android:layout_toEndOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/userHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/profileName"
+        android:layout_below="@+id/profileName"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/detailTweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="TextView"
+        android:layout_below="@+id/profileImage"
+        android:layout_alignStart="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/postedWhen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_below="@+id/detailTweet"
+        android:layout_alignStart="@+id/detailTweet"
+        android:layout_marginTop="12dp" />
+
+</RelativeLayout>
