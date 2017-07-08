@@ -1,4 +1,4 @@
-# Project 3 - *SimpleTweets*
+# Project 3/4 - *SimpleTweets*
 
 **Simple Tweets** is an android app that allows a user to view his Twitter timeline and post a new tweet. The app utilizes [Twitter REST API](https://dev.twitter.com/rest/public).
 
@@ -17,6 +17,14 @@ The following **required** functionality is completed:
   * [x] User can then enter a new tweet and post this to twitter
   * [x] User is taken back to home timeline with **new tweet visible** in timeline
   * [x] Newly created tweet should be manually inserted into the timeline and not rely on a full refresh
+  * [x] User can switch between Timeline and Mention views using tabs. 
+* [x] User can view their home timeline tweets.
+* [x] User can view the recent mentions of their username.
+* [x] User can navigate to view their own profile
+* [x] User can see picture, tagline, # of followers, # of following, and tweets on their profile.
+* [x] User can click on the profile image in any tweet to see another user's profile.
+* [x] User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
+* [x] Profile view should include that user's timeline
 
 The following **optional** features are implemented:
 
@@ -24,11 +32,13 @@ The following **optional** features are implemented:
 * [x] User can **pull down to refresh tweets timeline**
 * [x] User is using **"Twitter branded" colors and styles**
 * [ ] User sees an **indeterminate progress indicator** when any background or network task is happening
-* [ ] User can **select "reply" from detail view to respond to a tweet**
+* [x] User can **select "reply" from detail view to respond to a tweet**
   * [x] User that wrote the original tweet is **automatically "@" replied in compose**
 * [x] User can tap a tweet to **open a detailed tweet view**
   * [x] User can **take favorite (and unfavorite) or reweet** actions on a tweet
 * [ ] User can **see embedded image media within a tweet** on list or detail view.
+* [x]User can "reply" to any tweet from their home timeline.
+* [x] User can search for tweets matching a particular query and see results. 
 
 The following **bonus** features are implemented:
 
@@ -39,7 +49,7 @@ The following **bonus** features are implemented:
 * [x] User can **click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
 * [ ] User can view following / followers list through any profile they view.
 * [ ] User can see embedded image media within the tweet detail view
-* [ ] Use the popular ButterKnife annotation library to reduce view boilerplate.
+* [x] Use the popular ButterKnife annotation library to reduce view boilerplate.
 * [ ] On the Twitter timeline, leverage the [CoordinatorLayout](http://guides.codepath.com/android/Handling-Scrolls-with-CoordinatorLayout#responding-to-scroll-events) to apply scrolling behavior that [hides / shows the toolbar](http://guides.codepath.com/android/Using-the-App-ToolBar#reacting-to-scroll).
 * [ ] User can **open the twitter app offline and see last loaded tweets**. Persisted in SQLite tweets are refreshed on every application launch. While "live data" is displayed when app can get it from Twitter API, it is also saved for use in offline mode.
 
@@ -50,9 +60,13 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories Part 1:
 
 https://github.com/mperez7009/TwitterApp/blob/master/demo.mp4
+
+Here's a walkthrough of implemented user stories Part 2:
+
+https://github.com/mperez7009/TwitterApp/blob/master/demoPart2.mp4
 
 ## Notes
 
