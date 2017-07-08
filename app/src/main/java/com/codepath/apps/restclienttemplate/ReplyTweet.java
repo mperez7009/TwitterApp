@@ -15,23 +15,30 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
 
 public class ReplyTweet extends AppCompatActivity {
     public TwitterClient client;
     public String tweet;
     final int REQUEST_CODE = 1;
-    private EditText newTweet;
-    private TextView counter;
+   //private EditText newTweet;
+   // private TextView counter;
     public Tweet replyTweet;
     Long uid;
+
+    @BindView(R.id.tweetComp) EditText newTweet;
+    @BindView(R.id.counter) TextView counter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compose);
+        ButterKnife.bind(this);
         client = TwitterApp.getRestClient();
-        counter = (TextView) findViewById(R.id.counter);
-        newTweet = (EditText) findViewById(R.id.tweetComp);
+        //counter = (TextView) findViewById(R.id.counter);
+        //newTweet = (EditText) findViewById(R.id.tweetComp);
         newTweet.addTextChangedListener(mTextEditorWatcher);
         replyTweet = getIntent().getParcelableExtra("tweet");
         uid = replyTweet.uid;

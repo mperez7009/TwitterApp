@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import butterknife.BindView;
 import cz.msebera.android.httpclient.Header;
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
@@ -80,16 +81,19 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
     // create viewHolder class
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView ivProfileImage;
+       // public ImageView ivProfileImage;
         public TextView tvUsername;
         public TextView tvBody;
         public TextView tvTime;
         public ImageButton reply;
+    //    public ImageButton replyDet;
         public ImageButton retweet;
         public RelativeLayout relativeName;
         public ImageButton fav;
         TwitterClient client;
         Tweet reTweets;
+
+        @BindView(R.id.ivProfileImage) ImageView ivProfileImage;
 
 
         public ViewHolder(View itemView) {
@@ -114,6 +118,28 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
                     int position = getAdapterPosition();
                     Intent i = new Intent(context, ReplyTweet.class);
                     i.putExtra("tweet", mTweets.get(position));
+                    context.startActivity(i);
+                }
+            });
+
+
+       /*     reply.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    Intent i = new Intent(context, ReplyTweet.class);
+                    i.putExtra("tweet", mTweets.get(position));
+                    context.startActivity(i);
+                }
+            }); */
+
+            ivProfileImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    Intent i = new Intent(context, ProfileActivity.class);
+                    i.putExtra("tweet", mTweets.get(position));
+                    i.putExtra("option", false);
                     context.startActivity(i);
                 }
             });
@@ -286,6 +312,8 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
                     }
                 }
             });
+
+
 
 
             //retweet.setOnClickListener(new View.OnClickListener() {

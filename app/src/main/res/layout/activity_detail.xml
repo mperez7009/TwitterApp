@@ -53,4 +53,30 @@
         android:layout_alignStart="@+id/detailTweet"
         android:layout_marginTop="12dp" />
 
+    <ImageButton
+        android:id="@+id/replyDet"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/postedWhen"
+        android:layout_below="@+id/postedWhen"
+        android:layout_marginTop="21dp"
+        app:srcCompat="@drawable/ic_action_name" />
+
+    <ImageButton
+        android:id="@+id/favDet"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/rtDet"
+        android:layout_marginEnd="26dp"
+        app:srcCompat="@drawable/ic_fav" />
+
+    <ImageButton
+        android:id="@+id/rtDet"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/ic_retweet"
+        android:layout_alignTop="@+id/replyDet"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

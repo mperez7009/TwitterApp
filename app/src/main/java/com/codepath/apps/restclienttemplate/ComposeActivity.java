@@ -23,9 +23,14 @@ public class ComposeActivity extends AppCompatActivity {
     final int REQUEST_CODE = 1;
     private EditText newTweet;
     private TextView counter;
+
+   // @BindView(R.id.counter) TextView counter;
+   // @BindView(R.id.tweetComp) EditText newTweet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+      //  ButterKnife.bind(this);
         setContentView(R.layout.activity_compose);
         client = TwitterApp.getRestClient();
         counter = (TextView) findViewById(R.id.counter);
@@ -72,6 +77,7 @@ public class ComposeActivity extends AppCompatActivity {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             //This sets a textview to the current length
+
             counter.setText(String.valueOf(140-s.length()));
         }
 
